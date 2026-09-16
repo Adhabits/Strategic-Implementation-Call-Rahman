@@ -99,11 +99,17 @@
   .hero-sub { color: var(--gray); font-size: 17px; max-width: 560px; margin: 22px auto 34px; }
   .hero-proof-line { color: var(--gray-dim); font-size: 13px; margin-top: 20px; letter-spacing: 0.02em; }
 
-  /* VIDEO GRID (kept as-is, moved under hero) */
-  .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  @media (min-width: 860px) { .video-grid { grid-template-columns: repeat(4, 1fr); } }
-  .video-card { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--hairline); background: var(--bg-card); aspect-ratio: 9/16; }
-  .video-card iframe { width: 100%; height: 100%; border: none; display: block; }
+  /* BANNER POSTER */
+  .banner-frame {
+    max-width: 900px; margin: 0 auto;
+    border-radius: 18px; overflow: hidden;
+    border: 1px solid var(--hairline);
+    background: var(--bg-card);
+    box-shadow: 0 30px 80px -30px rgba(79,124,255,0.25);
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .banner-frame:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+  .banner-frame img { width: 100%; height: auto; display: block; }
 
   /* CAROUSEL (kept as-is) */
   .carousel-wrapper { overflow: hidden; margin-top: 40px; }
@@ -241,39 +247,17 @@
   </div>
 </section>
 
-<!-- VIDEO — single long-form video placed right under headline, like runmoreads.in -->
+<!-- BANNER POSTER — replaces the long-form video -->
 <section class="section" style="padding-top:24px;">
   <div class="wrap">
     <div class="fade-up on" style="text-align:center; max-width:640px; margin:0 auto 40px;">
-      <span class="eyebrow">Watch First</span>
+      <span class="eyebrow">The System</span>
       <h2 class="h2">The Exact System We Use To Turn Cold Traffic Into Booked Site Visits.</h2>
     </div>
-    <div class="fade-up on" style="max-width:760px; margin:0 auto;">
-      <div style="border-radius:16px; overflow:hidden; border:1px solid var(--hairline); aspect-ratio:16/9; background:var(--bg-card);">
-        <iframe style="width:100%; height:100%; border:none; display:block;" src="https://www.youtube.com/embed/22S_KlKYzP8?rel=0&modestbranding=1" title="AdHabits Real Estate System" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
 
-    <div class="fade-up on" style="text-align:center; max-width:640px; margin:56px auto 0;">
-      <span class="eyebrow">Client Feedback</span>
-      <h3 class="h3">What Our Clients Say About Working With Us</h3>
-      <p style="color:var(--gray); font-size:14px; margin-top:10px;">Real feedback from clients across our performance marketing engagements.</p>
-    </div>
-    <!-- VIDEO FEEDBACK GRID -->
-    <div class="video-grid fade-up on" style="margin-top:28px;">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/zOIbW4cp5V0?rel=0&modestbranding=1&playsinline=1" title="Client Feedback 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/cxCnF8go0MM?rel=0&modestbranding=1&playsinline=1" title="Client Feedback 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/vBWFbX9u3EU?rel=0&modestbranding=1&playsinline=1" title="Client Feedback 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/cF9HqmGrdz0?rel=0&modestbranding=1&playsinline=1" title="Client Feedback 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
+    <a href="#schedule" target="_self" class="banner-frame fade-up on" style="display:block;">
+      <img src="__BANNER_SRC__" alt="AdHabits — More Qualified Property Buyers. More Site Visits. More Sales." loading="eager" />
+    </a>
 
     <div class="fade-up on" style="text-align:center; margin-top:44px;">
       <a href="#schedule" target="_self" class="btn">See If You Qualify</a>
@@ -520,7 +504,7 @@
       </div>
     </div>
     <p class="footer-disclaimer">
-      AdHabits is a performance marketing consultancy. We do not sell, broker, or hold any interest in real estate inventory, and we make no guarantees of sales, bookings, or investment outcomes. Individual results vary based on project quality, pricing, location, and market conditions. RERA and other legal compliance remain the sole responsibility of the developer or business owner. This site is not affiliated with Meta, RERA, or any government housing authority. Testimonials reflect individual client experiences from past marketing engagements and are not guarantees of future results.
+      AdHabits is a performance marketing consultancy. We do not sell, broker, or hold any interest in real estate inventory, and we make no guarantees of sales, bookings, or investment outcomes. Individual results vary based on project quality, pricing, location, and market conditions. RERA and other legal compliance remain the sole responsibility of the developer or business owner. This site is not affiliated with Meta, RERA, or any government housing authority.
     </p>
     <div class="footer-bottom">
       <span>© 2025 AdHabits. All rights reserved. Jaipur, India.</span>
@@ -557,10 +541,10 @@
     const bodyEl = document.getElementById('legalModalBody');
     if (type === 'privacy') {
       titleEl.textContent = 'Privacy Policy';
-      bodyEl.textContent = 'This is a placeholder privacy policy page. Replace with your legal copy before launching. run more ads. respects your privacy and will not share your information with third parties without consent.';
+      bodyEl.textContent = 'This is a placeholder privacy policy page. Replace with your legal copy before launching. AdHabits respects your privacy and will not share your information with third parties without consent.';
     } else {
       titleEl.textContent = 'Terms & Conditions';
-      bodyEl.textContent = 'This is a placeholder terms page. Replace with your legal copy before launching. By using this site you agree to the terms that will be published here by run more ads.';
+      bodyEl.textContent = 'This is a placeholder terms page. Replace with your legal copy before launching. By using this site you agree to the terms that will be published here by AdHabits.';
     }
     document.getElementById('legalModalOverlay').classList.add('open');
   }
