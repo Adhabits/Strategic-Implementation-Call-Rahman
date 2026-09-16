@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="AdHabits — Meta Ads for real estate developers, builders and channel partners. Get qualified property buyers and booked site visits every week." />
-<meta name="keywords" content="real estate ads, property developer marketing, lead generation, meta ads real estate, dubai real estate, adhabits" />
-<meta property="og:title" content="AdHabits — More Qualified Property Buyers. More Site Visits." />
+<meta name="description" content="Meta Ads for real estate developers, builders and channel partners. Get qualified property buyers and booked site visits every week." />
+<meta name="keywords" content="real estate ads, property developer marketing, lead generation, meta ads real estate, dubai real estate" />
+<meta property="og:title" content="More Qualified Property Buyers. More Site Visits." />
 <meta property="og:description" content="We run Meta Ads for real estate developers and builders — so serious buyers land on your calendar every week." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://adhabits.in" />
-<meta property="og:image" content="https://i.ibb.co/GQqfsSjg/Chat-GPT-Image-Sep-16-2026-07-25-05-PM.png" />
-<title>AdHabits — Qualified Property Buyers For Real Estate Developers</title>
+<meta property="og:image" content="https://i.ibb.co/HTjLN8Qm/Chat-GPT-Image-Sep-16-2026-07-25-05-PM.png" />
+<title>Meta Ads For Real Estate — Get Qualified Property Buyers</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -108,7 +108,17 @@
     transition: transform 0.35s ease, border-color 0.35s ease;
   }
   .banner-frame:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
-  .banner-frame img { width: 100%; height: auto; display: block; }
+  .banner-frame img {
+    width: 100%; height: auto; display: block;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  /* Phone: banner goes edge-to-edge and stays full, uncropped, full quality */
+  @media (max-width: 768px) {
+    .banner-section .wrap { padding: 0; }
+    .banner-frame { border-radius: 0; border-left: none; border-right: none; box-shadow: none; }
+    .banner-frame:hover { transform: none; }
+    .banner-cta { padding: 0 24px; }
+  }
 
   /* FOUNDER STRIP */
   .founder-wrap { display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: center; }
@@ -212,7 +222,7 @@
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="/" target="_self" class="brand"><span class="bdot"></span>AdHabits</a>
+    <a href="#schedule" target="_self" class="brand"><span class="bdot"></span>Real Estate Growth</a>
     <a href="#schedule" target="_self" class="btn-outline">Book A Free Call</a>
   </div>
 </header>
@@ -236,13 +246,16 @@
 </section>
 
 <!-- BANNER POSTER -->
-<section class="section" style="padding-top:20px;">
+<section class="section banner-section" style="padding-top:20px;">
   <div class="wrap">
     <a href="#schedule" target="_self" class="banner-frame fade-up on" style="display:block;">
-      <img src="https://i.ibb.co/GQqfsSjg/Chat-GPT-Image-Sep-16-2026-07-25-05-PM.png" alt="AdHabits — More Qualified Property Buyers. More Site Visits. More Sales." loading="eager" />
+      <img src="https://i.ibb.co/HTjLN8Qm/Chat-GPT-Image-Sep-16-2026-07-25-05-PM.png"
+           alt="More Qualified Property Buyers. More Site Visits. More Sales."
+           width="1671" height="941"
+           loading="eager" decoding="async" fetchpriority="high" />
     </a>
 
-    <div class="fade-up on" style="text-align:center; margin-top:44px;">
+    <div class="fade-up on banner-cta" style="text-align:center; margin-top:44px;">
       <a href="#schedule" target="_self" class="btn">Book A Free Strategy Call</a>
     </div>
   </div>
@@ -266,7 +279,7 @@
         </div>
         <div class="scarcity"><span class="dot"></span>Only 5 spots this month</div>
       </div>
-      <iframe class="cal-iframe" src="https://cal.com/ad-habits-pxhadl/strategic?theme=dark" title="Book a Strategy Call with AdHabits" loading="lazy"></iframe>
+      <iframe class="cal-iframe" src="https://cal.com/ad-habits-pxhadl/strategic?theme=dark" title="Book a Strategy Call" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -461,7 +474,7 @@
         </div>
         <div class="scarcity"><span class="dot"></span>Only 5 spots this month</div>
       </div>
-      <iframe class="cal-iframe" src="https://cal.com/ad-habits-pxhadl/strategic?theme=dark" title="Book a Strategy Call with AdHabits" loading="lazy"></iframe>
+      <iframe class="cal-iframe" src="https://cal.com/ad-habits-pxhadl/strategic?theme=dark" title="Book a Strategy Call" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -479,7 +492,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-top">
-      <div class="brand"><span class="bdot"></span>AdHabits</div>
+      <div class="brand"><span class="bdot"></span>Real Estate Growth</div>
       <div class="footer-right">
         <div class="footer-social">
           <a href="https://www.instagram.com/thrive_clip_productions" target="_blank" rel="noopener" aria-label="Instagram">
@@ -496,10 +509,10 @@
       </div>
     </div>
     <p class="footer-disclaimer">
-      AdHabits is a performance marketing consultancy. We do not sell, broker, or hold any interest in real estate inventory, and we make no guarantees of sales, bookings, or investment outcomes. Results vary based on project quality, pricing, location, and market conditions. RERA and other legal compliance remain the sole responsibility of the developer or business owner. This site is not affiliated with Meta, RERA, or any government housing authority.
+      This is a performance marketing consultancy. We do not sell, broker, or hold any interest in real estate inventory, and we make no guarantees of sales, bookings, or investment outcomes. Results vary based on project quality, pricing, location, and market conditions. RERA and other legal compliance remain the sole responsibility of the developer or business owner. This site is not affiliated with Meta, RERA, or any government housing authority.
     </p>
     <div class="footer-bottom">
-      <span>© 2025 AdHabits. All rights reserved. Jaipur, India.</span>
+      <span>© 2025 All rights reserved. Jaipur, India.</span>
       <span><a href="tel:9743140915">+91 97431 40915</a> · <a href="mailto:adhabits5@gmail.com">adhabits5@gmail.com</a></span>
     </div>
   </div>
@@ -532,10 +545,10 @@
     const bodyEl = document.getElementById('legalModalBody');
     if (type === 'privacy') {
       titleEl.textContent = 'Privacy Policy';
-      bodyEl.textContent = 'This is a placeholder privacy policy. Replace with your legal copy before launching. AdHabits respects your privacy and will not share your information with third parties without consent.';
+      bodyEl.textContent = 'This is a placeholder privacy policy. Replace with your legal copy before launching. We respect your privacy and will not share your information with third parties without consent.';
     } else {
       titleEl.textContent = 'Terms & Conditions';
-      bodyEl.textContent = 'This is a placeholder terms page. Replace with your legal copy before launching. By using this site you agree to the terms that will be published here by AdHabits.';
+      bodyEl.textContent = 'This is a placeholder terms page. Replace with your legal copy before launching. By using this site you agree to the terms that will be published here.';
     }
     document.getElementById('legalModalOverlay').classList.add('open');
   }
